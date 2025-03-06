@@ -16,12 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const age = parseInt(ageInput.value);
             if (age > 18) {
                 setTimeout(() => {
-                    resolve(Welcome, ${nameInput.value}. You can vote.);
+                    resolve(`Welcome, ${nameInput.value}. You can vote.`);
                 }, 4000);
             } else {
                 setTimeout(() => {
-                    reject(Oh sorry ${nameInput.value}. You aren't old enough.); // ✅ Removed extra comma
-                }, 4000);
+                    reject(`Oh sorry ${nameInput.value}. You aren't old enough.`); 
             }
         })
         .then((message) => {
