@@ -1,4 +1,3 @@
-//your JS code here. If required.
 document.addEventListener("DOMContentLoaded", () => {
     const ageInput = document.getElementById("age");
     const nameInput = document.getElementById("name");
@@ -20,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 4000);
             } else {
                 setTimeout(() => {
-                    reject(`Oh sorry ${nameInput.value}. You aren't old enough.`); 
+                    reject(`Oh sorry ${nameInput.value}. You aren't old enough.`); // ✅ Removed extra comma
+                }, 4000);
             }
         })
         .then((message) => {
@@ -28,6 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((message) => {
             window.alert(message);
-        });
-    });
+        });
+    });
 });
